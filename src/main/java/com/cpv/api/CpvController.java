@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@RestController //Create RESTful web services using Spring MVC.
 public class CpvController {
 	
-	@Autowired
+	@Autowired // Automatic dependency injection
 	CpvRepository cpvRepository;
 	
-	@GetMapping("/getAllCpv")
+	@GetMapping("/getAllCpv") //To maps HTTP GET requests onto specific methods.
 	public List<CpvModel> getAllCpv()
 	{
 		return cpvRepository.findAll();

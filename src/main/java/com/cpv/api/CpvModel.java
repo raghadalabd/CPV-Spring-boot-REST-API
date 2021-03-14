@@ -6,12 +6,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
-@Table(name="cpv_list")
+@Entity //specifies that the class is an entity and is mapped to a database table
+@Table(name="cpv_list") //specifies the name of the database table
 public class CpvModel {
-	@Id
+	@Id //primary key of an entity
 	private String cpv_code;
-	@Column
+	@Column //indicate specific characteristics of the physical database column
 	private String description_en;
 	
 	public CpvModel()
